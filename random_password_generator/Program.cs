@@ -1,14 +1,16 @@
-﻿namespace random_password_generator_cli
+﻿using System;
+using System.Text;
+
+namespace random_password_generator
 {
-    internal class Program
+    internal static class Program
     {
         private const string LowercaseChars = "abcdefghijklmnopqrstuvwxyz";
         private const string UppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private const string NumberChars = "0123456789";
         private const string SymbolChars = "!@#$%^&*()-_=+[]{}|;:,.<>?";
 
-
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("--Random Password Generator--");
 
@@ -16,17 +18,16 @@
             if (int.TryParse(Console.ReadLine(), out int length) && length > 0)
             {
                 Console.Write("Include lowercase (a-z)? (y/n): ");
-                bool includeLowercase = Console.ReadLine().ToLower() == "y";
+                bool includeLowercase = Console.ReadLine()?.ToLower() == "y";
 
                 Console.Write("Include uppercase (A-Z)? (y/n): ");
-                bool includeUppercase = Console.ReadLine().ToLower() == "y";
+                bool includeUppercase = Console.ReadLine()?.ToLower() == "y";
 
                 Console.Write("Include numbers (0-9)? (y/n): ");
-
-                bool includeNumbers = Console.ReadLine().ToLower() == "y";
+                bool includeNumbers = Console.ReadLine()?.ToLower() == "y";
 
                 Console.Write("Include symbols (!@#$)? (y/n): ");
-                bool includeSymbols = Console.ReadLine().ToLower() == "y";
+                bool includeSymbols = Console.ReadLine()?.ToLower() == "y";
 
                 string password = GeneratePassword(length, includeLowercase, includeUppercase, includeNumbers, includeSymbols);
 
@@ -70,7 +71,7 @@
                 char randomChar = allowedChars[randomIndex];
                 password.Append(randomChar);
             }
-
+            
             return password.ToString();
         }
     }
