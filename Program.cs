@@ -21,15 +21,25 @@ namespace random_password_generator_cli
                 bool includeUppercase = Console.ReadLine().ToLower() == "y";
                 Console.WriteLine("Include numbers (0-9)? (Y/N): ");
                 bool IncludeNumbers = Console.ReadLine().ToLower() == "y";
-                Console.WriteLine("Include symbols (!@#$€)? (Y/N): ");
+                Console.WriteLine("Include symbols (!@#$)? (Y/N): ");
                 bool IncludeSymbols = Console.ReadLine().ToLower() == "y";
 
                 Console.WriteLine("\nGenerating Password...");
             }
             else
             {
-                Console.WriteLine("");
+                Console.WriteLine("Error, Input a positive number for the length!");
             }
+            Console.WriteLine("\nPress a key to exit");
+            Console.ReadKey();
         }
+    }
+
+    public class PasswordGenerator
+    {
+        private const string LowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+        private const string UppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        private const string NumberChars = "0123456789";
+        private const string SymbolChars = "!@#$%^&*()-_=+[]{}|;:,.<>?";
     }
 }
