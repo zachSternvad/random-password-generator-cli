@@ -8,6 +8,13 @@ namespace random_password_generator_cli
 {
     internal class Program
     {
+        public class PasswordGenerator
+        {
+            private const string LowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+            private const string UppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            private const string NumberChars = "0123456789";
+            private const string SymbolChars = "!@#$%^&*()-_=+[]{}|;:,.<>?";
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("--Random Password Generator--");
@@ -35,11 +42,5 @@ namespace random_password_generator_cli
         }
     }
 
-    public class PasswordGenerator
-    {
-        private const string LowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-        private const string UppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        private const string NumberChars = "0123456789";
-        private const string SymbolChars = "!@#$%^&*()-_=+[]{}|;:,.<>?";
-    }
+
 }
