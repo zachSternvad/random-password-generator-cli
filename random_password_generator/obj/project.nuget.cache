@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GCE03PNr/5Q=",
+  "success": true,
+  "projectFilePath": "/home/zach/Documents/Gitz/30_Days_30_Projects/random-password-generator-cli/random_password_generator/random_password_generator.csproj",
+  "expectedPackageFiles": [
+    "/home/zach/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.15/microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}
