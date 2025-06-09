@@ -13,7 +13,7 @@ namespace random_password_generator_cli
             Console.WriteLine("--Random Password Generator--");
 
             Console.WriteLine("Enter desired password length: ");
-            if (int,TryParse(Console.ReadLine(), out int length) && length > 0)
+            if (int.TryParse(Console.ReadLine(), out int length) && length > 0)
                 {
                 Console.WriteLine("Include lowercase (a-z)? (Y/N): ");
                 bool includeLowercase = Console.ReadLine().ToLower() == "y";
@@ -24,11 +24,11 @@ namespace random_password_generator_cli
                 Console.WriteLine("Include symbols (!@#$€)? (Y/N): ");
                 bool IncludeSymbols = Console.ReadLine().ToLower() == "y";
 
-                Console.WriteLine("\Generating Password...");
+                Console.WriteLine("\nGenerating Password...");
             }
             else
             {
-                Console.WriteLine(""
+                Console.WriteLine("");
             }
         }
     }
